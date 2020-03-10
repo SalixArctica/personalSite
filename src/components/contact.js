@@ -77,7 +77,7 @@ export default class Contact extends React.Component {
 
     handleSubmit = async (info, { setSubmitting }) => {
         return new Promise((resolve, reject) => {
-            fetch('http://localhost:7000/api/contact', {
+            fetch(process.env.GATSBY_API_URL, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
