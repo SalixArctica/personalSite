@@ -7,6 +7,7 @@ import Button from '../components/button';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Contact from '../components/contact';
+import GithubLogo from '../images/GitHub-Mark.svg';
 
 import projects from '../components/projects';
 
@@ -45,17 +46,17 @@ const TypistContainer = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{display: 'flex', textAlign: 'left', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '95vh'}}>
+    <div style={{ display: 'flex', textAlign: 'left', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '95vh' }}>
       <TypistContainer>
         <JumboText>
-          <Typist cursor={{hideWhenDone: true}}>
-            <b>Hi, I'm <span style={{color: 'teal'}}>Hank</span></b>
+          <Typist cursor={{ hideWhenDone: true }}>
+            <b>Hi, I'm <span style={{ color: 'teal' }}>Hank</span></b>
           </Typist>
         </JumboText>
         <SubtitleText>
-        <Typist startDelay='1500'>
-          I make
-          <span style={{color: 'teal'}}> applications
+          <Typist startDelay='1500'>
+            I make
+          <span style={{ color: 'teal' }}> applications
           <Typist.Backspace count={12} delay={200} />
           APIs
           <Typist.Backspace count={4} delay={200} />
@@ -64,22 +65,35 @@ const IndexPage = () => (
           stuff</span> on the internet
         </Typist>
         </SubtitleText>
-        <Button onClick={() => {document.getElementById("projects").scrollIntoView({behavior: "smooth", block: 'center' })}}>My Projects</Button>
-        <Button onClick={() => {document.getElementById("contact").scrollIntoView({behavior: "smooth", block: 'center' })}}>Contact</Button>
+        <Button onClick={() => { document.getElementById("projects").scrollIntoView({ behavior: "smooth", block: 'center' }) }}>My Projects</Button>
+        <Button onClick={() => { document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: 'center' }) }}>Contact</Button>
       </TypistContainer>
     </div>
-    <div style={{minHeight: '90vh'}}>
-      <h1 style={{borderBottom: '3px solid teal'}}>Projects</h1>
+    <div style={{ minHeight: '90vh' }}>
+      <h1 style={{ borderBottom: '3px solid teal' }}>Projects</h1>
       <ProjectGrid id='projects'>
-        {projects.map(project => 
-          <ProjectCard project={project}/>  
+        {projects.map(project =>
+          <ProjectCard project={project} />
         )}
+        <a href='https://github.com/Tankcaster'>
+        </a>
       </ProjectGrid>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center'
+      }}>
+        <div>
+          <a href='https://github.com/tankcaster'>
+            <img style={{ display: 'block', width: '50%', margin: 'auto auto' }} src={GithubLogo} />
+            <h1 style={{ margin: '0' }}>More on Github</h1>
+          </a>
+        </div>
+      </div>
     </div>
-    <div id='contact' style={{minHeight: '90vh'}}>
-      <h1 style={{borderBottom: '3px solid teal'}}>Contact</h1>
-      <div style={{display: 'flex', height: '100%', justifyContent: 'center', alignItems: 'center', fontSize: '2rem'}}>
-        <Contact/>
+    <div id='contact' style={{ minHeight: '90vh' }}>
+      <h1 style={{ borderBottom: '3px solid teal' }}>Contact</h1>
+      <div style={{ display: 'flex', height: '100%', justifyContent: 'center', alignItems: 'center', fontSize: '2rem' }}>
+        <Contact />
       </div>
     </div>
   </Layout>

@@ -86,7 +86,7 @@ class Navbar extends React.Component {
     }
 
     toggleNavbar = () => {
-        this.setState({navbarExtended: !this.state.navbarExtended});
+        this.setState({ navbarExtended: !this.state.navbarExtended });
     }
 
     render() {
@@ -97,8 +97,10 @@ class Navbar extends React.Component {
                 </Title>
                 <HamburgerDiv onClick={this.toggleNavbar}>|||</HamburgerDiv>
                 <NavLinks open={this.state.navbarExtended}>
-                    <Styledli onClick={() => {document.getElementById("projects").scrollIntoView({behavior: "smooth", block: 'center' })}}>Portfolio</Styledli> 
-                    <Styledli onClick={() => {document.getElementById("contact").scrollIntoView({behavior: "smooth", block: 'center' })}}>Contact</Styledli>
+                    <Styledli><a href='/resume.pdf'>Résumé</a></Styledli>
+                    <Styledli onClick={() => { document.getElementById("projects").scrollIntoView({ behavior: "smooth", block: 'center' }) }}>Portfolio</Styledli>
+                    <Styledli onClick={() => { document.getElementById("contact").scrollIntoView({ behavior: "smooth", block: 'center' }) }}>Contact</Styledli>
+
                 </NavLinks>
             </Nav>
         )

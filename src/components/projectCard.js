@@ -24,6 +24,7 @@ export default (props) => {
               <div style={{margin: '0 1rem'}}>
               <p>{props.project.live ? (<a href={props.project.live}>live</a>) : ''}{props.project.live && props.project.repo ? ' | ' : ''}{props.project.repo ?<a href={props.project.repo}>repo</a> : ''}</p>
               <p>{props.project.description}</p>
+              {props.children}
               </div>
           </ProjectCard>
     )

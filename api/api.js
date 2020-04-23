@@ -5,8 +5,6 @@ const cors = require('cors');
 const sgMail = require('@sendgrid/mail');
 require('dotenv').config()
 
-console.log(process.env.SENDGRID_API_KEY)
-
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const PORT = process.env.port || 7000
 const api = express();
@@ -33,5 +31,3 @@ api.post('/api/contact', (req, res, next) => {
 api.listen(PORT, () => {
     console.log(`listening on ${PORT}`) 
 })
-
-
