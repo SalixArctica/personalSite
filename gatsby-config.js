@@ -32,19 +32,12 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [
-          {
-            family: `Roboto Mono`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Roboto`,
-            subsets: [`latin`]
-          },
-        ],
+        google: {
+          families: ["Roboto"],
+        },
       },
-    }
+    },
   ],
 }
