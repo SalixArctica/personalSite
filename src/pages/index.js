@@ -50,7 +50,7 @@ const IndexPage = () => (
       <TypistContainer>
         <JumboText>
           <Typist cursor={{ hideWhenDone: true }}>
-            <b>Hi, I'm <span style={{ color: 'teal' }}>Hank</span></b>
+            <b>Hi, I'm <span style={{ color: 'teal' }}>Willow</span></b>
           </Typist>
         </JumboText>
         <SubtitleText>
@@ -75,7 +75,7 @@ const IndexPage = () => (
         {projects.map(project =>
           <ProjectCard project={project} />
         )}
-        <a href='https://github.com/Tankcaster'>
+        <a href='https://github.com/SalixArctica'>
         </a>
       </ProjectGrid>
       <div style={{
@@ -83,7 +83,7 @@ const IndexPage = () => (
         justifyContent: 'center'
       }}>
         <div>
-          <a href='https://github.com/tankcaster'>
+          <a href='https://github.com/SalixArctica'>
             <img style={{ display: 'block', width: '50%', margin: 'auto auto' }} src={GithubLogo} />
             <h1 style={{ margin: '0' }}>More on Github</h1>
           </a>

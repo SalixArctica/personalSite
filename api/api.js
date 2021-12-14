@@ -16,7 +16,7 @@ api.use(bodyParser.json());
 api.post('/api/contact', (req, res, next) => {
 
     let msg = {
-        to: 'hank@tankcaster.dev',
+        to: 'Willow@tankcaster.dev',
         from: `mailbot@tankcaster.dev`,
         replyTo: req.body.email,
         subject: 'Form Message',
