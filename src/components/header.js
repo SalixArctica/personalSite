@@ -93,7 +93,7 @@ class Navbar extends React.Component {
 
         return (
             <Nav>
-                <Title><StyledLink to='/'>Tankcaster Development</StyledLink>
+                <Title><StyledLink to='/'>Salix Development</StyledLink>
                 </Title>
                 <HamburgerDiv onClick={this.toggleNavbar}>|||</HamburgerDiv>
                 <NavLinks open={this.state.navbarExtended}>
