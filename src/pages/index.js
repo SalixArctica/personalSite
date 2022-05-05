@@ -11,6 +11,8 @@ import GithubLogo from '../images/GitHub-Mark.svg';
 
 import projects from '../components/projects';
 
+const newVar = 'hiya';
+
 const ProjectGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
